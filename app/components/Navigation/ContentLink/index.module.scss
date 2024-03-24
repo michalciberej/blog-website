@@ -1,0 +1,10 @@
+@use '../../../scss/vars';
+
+.link {
+  color: vars.$text-primary;
+  transition: color 0.33s ease;
+
+  &:hover {
+    color: vars.$text-primary;
+  }
+}

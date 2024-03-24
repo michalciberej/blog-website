@@ -1,0 +1,42 @@
+@use '../../../scss/vars';
+
+.dropdown {
+  background-color: vars.$background;
+  display: flex;
+  flex-direction: column;
+
+  .button {
+    display: flex;
+    background-color: transparent;
+    transition: color 0.3s ease;
+    display: flex;
+    gap: 1rem;
+    color: vars.$text-primary;
+    padding: vars.$sidebars-gap 0;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.$text-primary;
+    }
+
+    .title {
+      color: inherit;
+      font-size: vars.$h-size-sm;
+      font-weight: 900;
+    }
+
+    .icon {
+      color: inherit;
+      width: 18px;
+    }
+  }
+
+  .linkContainer {
+    display: flex;
+    flex-direction: column;
+    transform-origin: top;
+    // gap: vars.$sidebars-gap;
+    overflow: hidden;
+    line-height: 1.1;
+  }
+}

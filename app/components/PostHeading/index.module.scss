@@ -1,0 +1,60 @@
+@use '../../scss/vars';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .link {
+    text-decoration: none;
+    color: vars.$text-secondary;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: vars.$text-size-sm;
+
+    .icon {
+      width: vars.$text-size-sm;
+      transition: transform 0.33s ease;
+    }
+
+    &:hover .icon {
+      transform: translateX(-0.5rem);
+    }
+  }
+
+  .heading {
+    font-size: vars.$h-size-xl;
+  }
+
+  .subContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: vars.$text-secondary;
+    font-size: vars.$text-size-sm;
+
+    .difficulty {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .difficultyIcon {
+        width: 1rem;
+        aspect-ratio: 1/1;
+        border-radius: 9999px;
+      }
+    }
+
+    .clock {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .clockIcon {
+      width: 1.2rem;
+      aspect-ratio: 1/1;
+    }
+  }
+}

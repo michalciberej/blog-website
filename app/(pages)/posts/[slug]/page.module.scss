@@ -1,0 +1,9 @@
+@use '../../../scss/vars';
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: vars.$header-page-gap 0;
+  gap: 20px;
+}

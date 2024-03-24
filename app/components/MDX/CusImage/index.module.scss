@@ -1,0 +1,19 @@
+@use '../../../scss/vars';
+
+.container {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  border: 2px solid vars.$border-color;
+
+  .image {
+    width: 100%;
+    filter: opacity(0.5);
+    transition: filter 0.33s ease-out;
+
+    &:hover {
+      filter: opacity(1);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+$background: #15171b;
+$background-secondary: #24292e;
+$text-primary: #ededed;
+$text-secondary: #98a1b6;
+$color-primary: #4654a5;
+$border-color: #29282e;
+$card-background: #191b20;
+$code-border: #525151;
+$code-string: #4f4e5b;
+
+$codeblock-padding: 0.75rem 1.5rem;
+
+.mdx-codeblock {
+  border: 1px solid lighten($border-color, 10);
+  border-radius: 10px;
+  overflow-x: auto;
+  position: relative;
+
+  figure {
+    figcaption {
+      background-color: $background-secondary;
+      border-bottom: 1px solid lighten($border-color, 10);
+      padding: $codeblock-padding;
+      color: $text-secondary;
+    }
+    pre {
+      font-size: 16px;
+
+      code {
+        counter-reset: line;
+        line-height: 1.6rem;
+        padding: $codeblock-padding;
+      }
+    }
+  }
+}
+
+code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: $text-secondary;
+}
+
+code[data-line-numbers-max-digits='2'] > [data-line]::before {
+  width: 2rem;
+}
+
+code[data-line-numbers-max-digits='3'] > [data-line]::before {
+  width: 3rem;
+}
+
+span[data-line] {
+  border-radius: 10px;
+}
+
+span[data-line]:hover {
+  background-color: rgba($color-primary, 0.3);
+}

@@ -1,0 +1,17 @@
+@use '../../../scss/vars';
+
+.link {
+  color: inherit;
+  width: fit-content;
+  padding-left: 1rem;
+  text-decoration: none;
+  transition: all 0.33s ease;
+  font-size: vars.$text-size-sm;
+  border-left: 1px solid vars.$text-secondary;
+
+  &:hover,
+  &:focus {
+    color: vars.$text-primary;
+    border-color: vars.$text-primary;
+  }
+}
