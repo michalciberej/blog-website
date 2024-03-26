@@ -4,15 +4,17 @@
   position: sticky;
   display: flex;
   top: vars.$header-height + 3rem;
-  min-width: vars.$sidebars-width;
+  width: fit-content;
+  max-width: vars.$sidebars-width;
   height: calc(100dvh - 190px);
   overflow-y: scroll;
   margin-top: vars.$header-page-gap;
   color: vars.$text-secondary;
 
-  @media (max-width: 578px) {
+  @media (max-width: 880px) {
     display: none;
   }
+
   .navigation {
     width: 100%;
     height: 100%;

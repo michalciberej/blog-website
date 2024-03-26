@@ -3,10 +3,10 @@ import styles from './index.module.scss';
 
 const ContentLink = ({
   label,
-  currentActive,
-}: {
+}: // currentActive,
+{
   label: string;
-  currentActive: string;
+  // currentActive: string;
 }) => {
   const href = label.split(' ').join('-').toLowerCase();
 
@@ -15,16 +15,15 @@ const ContentLink = ({
     const targetEl = document.querySelector(`#${href}`);
     targetEl?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
-  console.log(label, currentActive);
 
   return (
     <li>
       <a
         href={`#${href}`}
         onClick={handleScroll}
-        style={{
-          color: label === currentActive ? 'crimson' : 'currentColor',
-        }}
+        // style={{
+        //   color: label === currentActive ? '#4654a5' : 'currentColor',
+        // }}
         className={styles.link}>
         {label.slice(0, 1).toUpperCase() + label.slice(1)}
       </a>

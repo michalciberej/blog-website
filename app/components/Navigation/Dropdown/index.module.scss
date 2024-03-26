@@ -4,6 +4,8 @@
   background-color: vars.$background;
   display: flex;
   flex-direction: column;
+  width: fit-content;
+  padding-bottom: vars.$sidebars-gap;
 
   .button {
     display: flex;
@@ -12,9 +14,10 @@
     display: flex;
     gap: 1rem;
     color: vars.$text-primary;
-    padding: vars.$sidebars-gap 0;
     cursor: pointer;
+    padding-bottom: vars.$sidebars-gap;
 
+    &:focus,
     &:hover {
       color: vars.$text-primary;
     }
@@ -34,7 +37,6 @@
   .linkContainer {
     display: flex;
     flex-direction: column;
-    transform-origin: top;
     // gap: vars.$sidebars-gap;
     overflow: hidden;
     line-height: 1.1;

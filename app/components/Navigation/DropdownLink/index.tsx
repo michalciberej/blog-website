@@ -16,7 +16,6 @@ const DropdownLink = ({ title }: { title: string }) => {
     <Link
       href={`/posts/${href}`}
       style={{
-        color: p === title ? '#4654a5' : 'currentColor',
         borderColor: p === title ? '#4654a5' : 'currentColor',
       }}
       className={styles.link}>

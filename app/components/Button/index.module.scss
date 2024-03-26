@@ -1,0 +1,25 @@
+@use '../../scss/vars';
+
+.button {
+  padding: 0.25rem 0.75rem;
+  color: vars.$text-secondary;
+  text-decoration: none;
+  background-color: vars.$background-secondary;
+  border-radius: 10px;
+  border: 1px solid lighten(vars.$border-color, 10);
+  transition: all 0.33s ease;
+  font-size: vars.$text-size-m;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.1rem;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 12px vars.$color-primary;
+  }
+
+  .icon {
+    height: vars.$text-size-sm;
+    aspect-ratio: 1/1;
+  }
+}

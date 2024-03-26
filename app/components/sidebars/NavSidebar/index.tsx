@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 import { Dropdown } from '@/app/components';
-import getPostsByCategory from '@/lib/getPostsByCategory';
+import getPostsByCategory from '@/app/lib/getPostsByCategory';
 
 const NavSidebar = async () => {
   const categories = getPostsByCategory();

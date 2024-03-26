@@ -2,6 +2,7 @@ import { Post } from '@/.contentlayer/generated';
 import styles from './index.module.scss';
 import Link from 'next/link';
 import { ArrowLeftIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { Button } from '@/app/components';
 
 //! CHANGE FOR VARIABLE IMPORTS FROM SCSS FILE
 const easyClr = '0, 242, 188';
@@ -52,13 +53,25 @@ const PostHeading = ({ post }: { post: Post }) => {
         </div>
       </div>
       <span className={styles.description}>{description}</span>
-      <ul className='aContainer'>
-        <li>
-          <a href={liveDemo}>Live Demo</a>
-        </li>
-        <li>
-          <a href={sourceCode}>Source Code</a>
-        </li>
+      <ul className={styles.linkContainer}>
+        {liveDemo && (
+          <li>
+            <Button
+              link
+              href={liveDemo}>
+              Live Demo
+            </Button>
+          </li>
+        )}
+        {sourceCode && (
+          <li>
+            <Button
+              link
+              href={sourceCode}>
+              Source Code
+            </Button>
+          </li>
+        )}
       </ul>
     </div>
   );

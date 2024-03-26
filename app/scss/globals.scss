@@ -25,6 +25,20 @@
   background-color: darken(#9ea6b6, 30);
 }
 
-h2 {
+//! REMOVE MDX STYLES
+
+main h2 {
   scroll-margin-top: 8rem;
+  color: #ededed;
+}
+
+main p {
+  line-height: 1.8;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #98a1b6;
 }

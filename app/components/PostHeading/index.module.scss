@@ -12,14 +12,20 @@
     align-items: center;
     gap: 0.5rem;
     font-size: vars.$text-size-sm;
+    width: fit-content;
+    transition: color 0.15s ease;
 
     .icon {
       width: vars.$text-size-sm;
-      transition: transform 0.33s ease;
+      transition: all 0.15s ease;
     }
 
-    &:hover .icon {
-      transform: translateX(-0.5rem);
+    &:hover {
+      color: vars.$text-primary;
+
+      .icon {
+        transform: translateX(-0.25rem);
+      }
     }
   }
 
@@ -56,5 +62,12 @@
       width: 1.2rem;
       aspect-ratio: 1/1;
     }
+  }
+
+  .linkContainer {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 }

@@ -1,0 +1,55 @@
+@use '../../scss/vars';
+
+$logoEl-size: 15px;
+$logoEl-gap: 3px;
+$logoEl-transform: $logoEl-size + $logoEl-gap;
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3px;
+  cursor: pointer;
+
+  div {
+    width: $logoEl-size;
+    aspect-ratio: 1/1;
+    transition: all 0.33s ease;
+  }
+
+  .logoEl1 {
+    background-color: vars.$light-grey;
+    border-radius: 50%;
+  }
+  .logoEl2 {
+    background-color: vars.$color-primary;
+    border-radius: 50% 50% 50% 0;
+  }
+  .logoEl3 {
+    background-color: vars.$color-primary;
+    border-radius: 50% 0 50% 50%;
+  }
+  .logoEl4 {
+    background-color: vars.$text-secondary;
+  }
+
+  &:hover,
+  &:focus {
+    & .logoEl1 {
+      transform: translateX($logoEl-transform);
+      border-radius: 50% 50% 50% 0;
+    }
+    & .logoEl2 {
+      transform: translateY($logoEl-transform);
+      border-radius: 50%;
+    }
+    & .logoEl3 {
+      transform: translateY(-$logoEl-transform);
+      border-radius: 50%;
+    }
+    & .logoEl4 {
+      transform: translateX(-$logoEl-transform);
+      border-radius: 50% 0 50% 50%;
+    }
+  }
+}

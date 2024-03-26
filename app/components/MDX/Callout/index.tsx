@@ -14,9 +14,9 @@ const infoClr = '70, 85, 166';
 const succesClr = '0, 242, 188';
 const warningClr = '251, 149, 45';
 const dangerClr = '230, 69, 79';
+let clr = 'transparent';
 
 const Callout: FC<CalloutProps> = ({ children, type }) => {
-  let clr = 'transparent';
   if (type === 'INFO') clr = infoClr;
   else if (type === 'SUCCES') clr = succesClr;
   else if (type === 'WARNING') clr = warningClr;

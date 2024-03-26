@@ -3,12 +3,16 @@ import Heading from './Heading';
 import CodeBlock from './CodeBlock';
 import Callout from './Callout';
 import CusImage from './CusImage';
+import Pill from './Pill';
+import List from './List';
 
 const components = {
   Heading,
   CodeBlock,
   Callout,
   CusImage,
+  Pill,
+  List
 };
 
 interface MdxProps {

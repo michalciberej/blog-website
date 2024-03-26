@@ -7,6 +7,8 @@ import Dropdown from './Navigation/Dropdown';
 import ContentLink from './Navigation/ContentLink';
 import PostLayout from './PostLayout';
 import PostHeading from './PostHeading';
+import Logo from './Logo';
+import Button from './Button';
 
 export {
   Footer,
@@ -18,4 +20,6 @@ export {
   ContentLink,
   PostLayout,
   PostHeading,
+  Logo,
+  Button,
 };
