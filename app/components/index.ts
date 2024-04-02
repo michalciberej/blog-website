@@ -9,6 +9,9 @@ import PostLayout from './PostLayout';
 import PostHeading from './PostHeading';
 import Logo from './Logo';
 import Button from './Button';
+import Preview from './Preview';
+import ImageWithFallback from './ImageWithFallback';
+import PreviewGroup from './PreviewGroup';
 
 export {
   Footer,
@@ -22,4 +25,7 @@ export {
   PostHeading,
   Logo,
   Button,
+  Preview,
+  ImageWithFallback,
+  PreviewGroup,
 };
