@@ -4,8 +4,8 @@
   position: sticky;
   display: flex;
   top: vars.$header-height + 3rem;
-  width: fit-content;
-  max-width: vars.$sidebars-width;
+  width: 100%;
+  max-width: vars.$sidebars-width - 50px;
   height: calc(100dvh - 190px);
   overflow-y: scroll;
   margin-top: vars.$header-page-gap;

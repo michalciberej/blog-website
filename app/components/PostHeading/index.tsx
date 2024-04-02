@@ -26,12 +26,12 @@ const PostHeading = ({ post }: { post: Post }) => {
   else if (difficulty === 'advanced') difficultyClr = advancedClr;
 
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <Link
-        href={'/'}
+        href={'/posts/'}
         className={styles.link}>
         <ArrowLeftIcon className={styles.icon} />
-        <span className={styles.linkText}>Home</span>
+        <span className={styles.linkText}>Posts</span>
       </Link>
       <h1 className={styles.heading}>{title}</h1>
       <div className={styles.subContainer}>
@@ -73,7 +73,7 @@ const PostHeading = ({ post }: { post: Post }) => {
           </li>
         )}
       </ul>
-    </div>
+    </header>
   );
 };
 
