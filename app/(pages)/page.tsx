@@ -18,7 +18,7 @@ const HomePage = () => {
       <section>
         <PreviewGroup
           posts={recentPosts}
-          title='Recent Titles'
+          title='Recent Posts'
           amount={6}
         />
       </section>

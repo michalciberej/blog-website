@@ -26,7 +26,7 @@ const Callout: FC<CalloutProps> = ({ children, type }) => {
     <div
       className={styles.callout}
       style={{
-        backgroundColor: `rgba(${clr}, 0.3)`,
+        backgroundColor: `rgba(${clr}, 0.05)`,
         border: `2px solid rgba(${clr}, 1)`,
       }}>
       <div

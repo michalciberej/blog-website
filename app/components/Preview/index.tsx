@@ -28,7 +28,7 @@ const Preview = ({ post }: { post: Post }) => {
         <Link
           href={`/posts/${slugAsParams}`}
           className={styles.title}>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
         </Link>
         <p className={styles.description}>{description}</p>
       </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Logo from '../Logo';
 import styles from './index.module.scss';
 
@@ -9,10 +10,7 @@ const Header = () => {
         <nav>
           <ul className={styles.linkList}>
             <li>
-              <a href=''>About me</a>
-            </li>
-            <li>
-              <a href=''>Demos</a>
+              <Link href='https://www.michalciberej.com'>About me</Link>
             </li>
           </ul>
         </nav>

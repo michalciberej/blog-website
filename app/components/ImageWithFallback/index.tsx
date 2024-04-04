@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { ImageProps } from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FC } from 'react';
 
 interface ImageWithFallbackProps extends ImageProps {

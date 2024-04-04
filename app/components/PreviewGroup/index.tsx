@@ -16,7 +16,7 @@ const PreviewGroup = ({
     <div className={styles.previewContainer}>
       {title && (
         <div className={styles.previewHeading}>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <Link href='/posts/'>See All</Link>
         </div>
       )}
