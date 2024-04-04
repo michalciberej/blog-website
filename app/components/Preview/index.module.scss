@@ -4,15 +4,8 @@
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  overflow: hidden;
-  transition: all 0.33s ease;
   border: 1px solid transparent;
   max-width: 650px;
-
-  &:hover,
-  &:focus {
-    border: 1px solid vars.$border-color;
-  }
 
   .button {
     outline: none;
@@ -26,6 +19,12 @@
       max-height: 225px;
       filter: brightness(0.75);
       border-radius: 20px;
+      transition: all 0.33s ease;
+    }
+
+    &:hover .image,
+    &:focus .image {
+      transform: translateY(-4px);
     }
   }
 
