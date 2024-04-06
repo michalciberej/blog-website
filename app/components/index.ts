@@ -12,6 +12,8 @@ import Button from './Button';
 import Preview from './Preview';
 import ImageWithFallback from './ImageWithFallback';
 import PreviewGroup from './PreviewGroup';
+import DemoHeader from './DemoHeader';
+import SelectNav from './Navigation/SelectNav';
 
 export {
   Footer,
@@ -28,4 +30,6 @@ export {
   Preview,
   ImageWithFallback,
   PreviewGroup,
+  DemoHeader,
+  SelectNav,
 };
