@@ -1,0 +1,12 @@
+@use '../../scss/vars';
+
+.mainContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1575px;
+  margin: 0 auto;
+  gap: 20px;
+}

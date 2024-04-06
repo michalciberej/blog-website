@@ -1,0 +1,6 @@
+@use '../../../scss/vars';
+
+.embed {
+  width: 100%;
+  min-height: calc(100dvh - vars.$header-height - 4px);
+}
