@@ -52,7 +52,7 @@ const PostHeading = ({ post }: { post: Post }) => {
           <span>{readTime} min</span>
         </div>
       </div>
-      <span className={styles.description}>{description}</span>
+      <p className={styles.description}>{description}</p>
       <ul className={styles.linkContainer}>
         {liveDemo && (
           <li>

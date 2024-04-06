@@ -18,7 +18,7 @@ $logoEl-transform: $logoEl-size + $logoEl-gap;
   }
 
   .logoEl1 {
-    background-color: vars.$light-grey;
+    background-color: vars.$text-secondary;
     border-radius: 50%;
   }
   .logoEl2 {
@@ -31,6 +31,7 @@ $logoEl-transform: $logoEl-size + $logoEl-gap;
   }
   .logoEl4 {
     background-color: vars.$text-secondary;
+    border-radius: 50%;
   }
 
   &:hover,

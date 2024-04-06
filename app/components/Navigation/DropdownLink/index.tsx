@@ -4,8 +4,7 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 import { usePathname } from 'next/navigation';
 
-const DropdownLink = ({ title }: { title: string }) => {
-  const href = title.toLocaleLowerCase().split(' ').join('-');
+const DropdownLink = ({ link }: { link: { title: string; href: string } }) => {
   const path = usePathname().split('/').at(-1)!;
   const p = path
     .split('-')
@@ -14,12 +13,12 @@ const DropdownLink = ({ title }: { title: string }) => {
 
   return (
     <Link
-      href={`/posts/${href}`}
+      href={link.href}
       style={{
-        borderColor: p === title ? '#4654a5' : 'currentColor',
+        borderColor: p === link.title ? '#4654a5' : 'currentColor',
       }}
       className={styles.link}>
-      {title}
+      {link.title}
     </Link>
   );
 };

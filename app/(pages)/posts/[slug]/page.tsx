@@ -1,4 +1,3 @@
-
 import {
   ContentSidebar,
   PostLayout,
@@ -8,23 +7,34 @@ import {
 import styles from './page.module.scss';
 import getPostBySlug from '@/app/lib/getPostBySlug';
 import Mdx from '@/app/components/MDX/mdx-components';
-import { allPosts, Post } from '@/.contentlayer/generated';
+import { allPosts } from '@/.contentlayer/generated';
 import '@/app/scss/code-highlight.scss';
 import getRandomPosts from '@/app/lib/getRandomPosts';
 
-interface PostPageProps {
+interface PostPageParams {
   params: {
     slug: string;
   };
 }
 
 export const generateStaticParams = () => {
-  return allPosts.map((post: Post) => {
-    slug: post.slugAsParams;
+  return allPosts.map(({ slugAsParams }) => {
+    slug: slugAsParams;
   });
 };
 
-const PostPage = async ({ params }: PostPageProps) => {
+export const generateMetadata = ({ params }: PostPageParams) => {
+  const title = params.slug
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+
+  return {
+    title: `${title} | Michal Ciberej's Blog`,
+  };
+};
+
+const PostPage = async ({ params }: PostPageParams) => {
   const post = await getPostBySlug(params.slug);
   const randomPosts = getRandomPosts(params.slug, 3);
 

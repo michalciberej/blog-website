@@ -3,10 +3,11 @@
 import styles from './page.module.scss';
 import { categories, Category } from '@/app/content/postCategories';
 import { useEffect, useState } from 'react';
-import { PreviewGroup } from '@/app/components';
+import { PreviewGroup, Button } from '@/app/components';
 import getRecentPosts from '@/app/lib/getRecentPosts';
 
 const colorPrimary = '#4654a5';
+const textPrimary = '#ededed';
 
 const AllPostsWebsite = () => {
   const allPosts = getRecentPosts();
@@ -38,6 +39,7 @@ const AllPostsWebsite = () => {
               style={{
                 borderColor:
                   currentCategory === category ? colorPrimary : undefined,
+                color: currentCategory === category ? textPrimary : undefined,
               }}
               onClick={() => handleSort(category)}
               aria-label={`Sort by ${category}`}>
@@ -54,10 +56,12 @@ const AllPostsWebsite = () => {
             amount={currentAmount}
           />
         )}
+        <div className={styles.button}>
+          {currentAmount < posts.length && (
+            <Button onClick={handleShowMore}>Show More</Button>
+          )}
+        </div>
       </section>
-      {currentAmount < allPosts.length && (
-        <button onClick={handleShowMore}>Show More</button>
-      )}
     </div>
   );
 };

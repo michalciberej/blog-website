@@ -3,6 +3,7 @@
 .link {
   color: vars.$text-primary;
   transition: color 0.33s ease;
+  margin-left: 1rem;
 
   &:hover {
     color: vars.$text-primary;

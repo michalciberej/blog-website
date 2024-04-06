@@ -8,13 +8,13 @@ import { useState, useRef, useEffect } from 'react';
 
 interface DropdownProps {
   title: string;
-  postList: string[];
+  linkList: { title: string; href: string }[];
 }
 
-const duration = 0.3;
-const ease = 'power3.easeOut';
+const duration = 1;
+const ease = 'elastic.out';
 
-const Dropdown = ({ title, postList }: DropdownProps) => {
+const Dropdown = ({ title, linkList }: DropdownProps) => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   const iconRef = useRef(null);
   const dropdownRef = useRef(null);
@@ -30,13 +30,13 @@ const Dropdown = ({ title, postList }: DropdownProps) => {
     const tl = gsap.timeline();
 
     if (!isOpened) {
-      tl.to(dropdown, { height: 0, duration, ease });
+      tl.to(dropdown, { height: 0, duration: 0.3, ease: 'power3.out.' });
       tl.to(icon, { rotateZ: -90, duration, ease }, '<');
     } else {
       tl.to(dropdown, {
         height: 'auto',
-        duration,
-        ease,
+        duration: 0.3,
+        ease: 'power3.out',
       });
       tl.to(icon, { rotateZ: 0, duration, ease }, '<');
     }
@@ -45,7 +45,7 @@ const Dropdown = ({ title, postList }: DropdownProps) => {
   return (
     <div
       className={styles.dropdown}
-      style={{ display: !postList.length ? 'none' : 'flex' }}>
+      style={{ display: !linkList.length ? 'none' : 'flex' }}>
       <button
         type='button'
         onClick={() => setIsOpened(!isOpened)}
@@ -60,9 +60,9 @@ const Dropdown = ({ title, postList }: DropdownProps) => {
       <ul
         className={styles.linkContainer}
         ref={dropdownRef}>
-        {postList.map((postTitle, index) => (
+        {linkList.map((postTitle, index) => (
           <li key={index}>
-            <DropdownLink title={postTitle} />
+            <DropdownLink link={postTitle} />
           </li>
         ))}
       </ul>
