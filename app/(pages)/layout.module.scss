@@ -1,0 +1,8 @@
+@use 'vars';
+
+.body {
+  background-color: vars.$background;
+  color: vars.$text-primary;
+  height: 100%;
+  min-height: 100dvh;
+}
