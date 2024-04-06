@@ -3,20 +3,22 @@ import { categories } from '@/app/content/postCategories';
 
 interface PostsSortedByCategory {
   category: string;
-  titles: string[];
+  links: { title: string; href: string }[];
 }
 
 const getPostsByCategory = (): PostsSortedByCategory[] => {
   const cp = categories;
 
   const byCategory = cp.map((category) => {
-    const titles = allPosts
+    const links = allPosts
       .filter((post) => post.category === category)
-      .map((post) => post.title);
+      .map(({ title, slugAsParams }) => {
+        return { title, href: `/posts/${slugAsParams}` };
+      });
 
     return {
       category,
-      titles,
+      links,
     };
   });
 
